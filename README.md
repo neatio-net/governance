@@ -1,3 +1,3 @@
-# NeatBuy
+# Neatio
 
-Neatio buy interface.
+## Governance Page.
