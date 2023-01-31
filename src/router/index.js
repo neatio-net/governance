@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Layout = resolve => require(['@/components/layouts/Layout'], resolve);
-const neatBuy = resolve => require(['@/components/pages/neatBuy'], resolve)
+const neatGov = resolve => require(['@/components/pages/neatGov'], resolve)
 
 
 Vue.use(Router)
@@ -12,8 +12,8 @@ const router = new Router({
         component: Layout,
         children: [{
             path: '',
-            name: 'neatBuy',
-            component: neatBuy,
+            name: 'neatGov',
+            component: neatGov,
             meta: []
         },
 
