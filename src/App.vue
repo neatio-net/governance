@@ -41,9 +41,9 @@ export default {
 
 
 .main {
-  background-image:  url('assets/hero-bg.png');
-  /* background-blend-mode: multiply; */
-  background-color: #000;
+  background-image:  url('assets/holograph.jpg');
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.589);
   background-size: cover;
 
 

@@ -1,3 +1,3 @@
 # Neatio
 
-## Governance
+## Governance Interface
