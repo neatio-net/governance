@@ -8,7 +8,7 @@
           rel="noopener"
           ><span style="color: #ddd">Terms</span></a
         >
-        © 2022 Neatio
+        © 2023 Neatio
       </div>
 
       <div class="contact"></div>

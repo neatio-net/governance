@@ -2,11 +2,6 @@
   <div class="nav-container">
     <div class="nav-panel">
       <div class="common-inline-block ic" style="">
-        <div class="connBtn" v-show="address != null">
-          <button id="connectButton" @click="switchToBSCChain">
-            <div class="conColor2">{{ address }}</div>
-          </button>
-        </div>
 
         <div class="connBtn" v-show="address == null">
           <button id="connectButton" @click="switchToBSCChain">
@@ -27,7 +22,7 @@ export default {
       searchContent: "",
       otherSearch: "",
       currentChainId: "",
-      chainId: "0x38",
+      chainId: "0x203",
       testChainId: "0x20d",
       address: null,
       shortAddress: "null",
@@ -88,7 +83,7 @@ export default {
         if (this.currentChainId !== this.chainId) {
           this.connectAccount();
         } else {
-          this.address = `BSC Network`;
+          this.address = `Neatio Network`;
           this.shortAddress = `${accounts[0].substr(
             0,
             6
@@ -118,14 +113,14 @@ export default {
 
     async switchToBSCChain() {
       let chainIds = "0x38";
-      let rpc = "https://bsc-dataseed.binance.org/";
-      let browser = "https://bscscan.com";
-      let chainName = "Binance Smart Chain";
+      let rpc = "https://rpc.neatio.net";
+      let browser = "https://scan.neatio.net";
+      let chainName = "Neatio Network";
 
       try {
         this.currentChainId = await ethereum.request({ method: "eth_chainId" });
         if (this.currentChainId === chainIds) {
-          window.alert("BSC Network has been added to Metamask.");
+          window.alert("Neatio Network has been added to Metamask.");
         }
 
         await ethereum.request({
@@ -142,8 +137,8 @@ export default {
                   chainId: chainIds,
                   chainName: chainName,
                   nativeCurrency: {
-                    name: "BNB",
-                    symbol: "BNB",
+                    name: "NEAT",
+                    symbol: "NEAT",
                     decimals: 18,
                   },
                   rpcUrls: [rpc],
