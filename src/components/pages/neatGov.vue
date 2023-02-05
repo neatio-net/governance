@@ -102,26 +102,7 @@
         </div>
       </div> 
 
-  <div class="noteText">
-        <div
-          class="dashboard4"
-          v-show="address == null || currentChainId != '0x203'"
-        >
-          <span style="color: white">TIP:</span> To manually switch to Neatio
-          Network network, click on the button "Wrong Network" found on the
-          top of the page.
-        </div>
-        <div class="dashboard4">
-          <span style="color: white">NOTE:</span> Sending anything other than
-          BNB or a compatible EVM coin/token to our address may result in the
-          loss of your coins.
-        </div>
-        <div class="dashboard4">
-          <span style="color: white">T&C:</span> By visiting and using the
-          Neatio website, you must agree with our terms and conditions listed at
-          the bottom of this page.
-        </div>
-      </div>
+
     </div>
   </div>
 </template>
