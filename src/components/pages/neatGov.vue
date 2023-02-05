@@ -1,14 +1,14 @@
 <template>
   <div class="main">
-    <!-- <div class="buylogo" v-show="address == null">
+    <!-- <div class="buylogo">
       <img src="../../assets/presale.png" alt="buy logo" class="buyimg" />
     </div> -->
 
-    <!-- <div v-if="step == 1">
+    <div v-if="step == 1">
       <Access @unlock="unlock"></Access>
-    </div> -->
+    </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
-      <!-- <div class="box1" v-show="address != null && currentChainId == '0x203'">
+      <div class="box1" v-show="address != null && currentChainId == '0x203'">
         <div
           class="bnblogo"
           v-show="address != null && currentChainId == '0x203'"
@@ -37,19 +37,12 @@
           >
             <span style="color: #7192b3; font-weight: bold"></span
             ><span style="color: white">{{ balance }}</span>
-            <span style="color: #00ffff"> BNB</span>
-          </div>
-
-          <div
-            class="address-title"
-            v-show="address != null && currentChainId == '0x203'"
-          >
-            ≈ ${{ balance * bnbprice }}
+            <span style="color: #00ffff"> NEAT</span>
           </div>
         </div>
-      </div> -->
+      </div>
 
-      <!-- <div class="box0" v-show="address != null && currentChainId != '0x203'">
+      <div class="box0" v-show="address != null && currentChainId != '0x203'">
         <div class="ntrk" v-show="address != null && currentChainId != '0x203'">
           <div>Please switch to Neatio Network network!</div>
         </div>
@@ -81,7 +74,7 @@
           >
             <span style="color: #7192b3; font-weight: bold"></span
             ><span style="color: white">{{ balance }}</span>
-            <span style="color: #00ffff"> BNB</span>
+            <span style="color: #00ffff"> NEAT</span>
           </div>
 
           <div
@@ -91,39 +84,25 @@
             ≈ ${{ balance * bnbprice }}
           </div>
         </div>
-      </div> -->
-
-      <!-- <div class="box2" v-show="address != null && currentChainId == '0x203'">
+      </div>
+ <div class="box2" v-show="address != null && currentChainId == '0x203'">
         <div class="info-box"></div>
-        <div class="neatrate">1 NEAT = $0.025</div>
 
-        <div class="itemNeat">
-          <p style="font-size: 14px"></p>
-          <input
-            class="inputs"
-            v-model="amountToBuy"
-            placeholder="Amount to buy"
-            @keyup="totalUSDcalc()"
-          />
-        </div>
-        <div class="neatrate-bnb">≈ {{ totalUSD }} USD</div>
-        <div class="neatrate-bnb">≈ {{ totalBNB }} BNB</div>
 
         <div class="btn" v-show="address != null && currentChainId == '0x203'">
-          <button id="gtButton" @click="neatBuy">{{ "Let's Buy" }}</button>
+          <button id="gtButton" @click="neatBuy">{{ "VOTE" }}</button>
         </div>
-      </div> -->
-
-      <!-- <div class="noteText2">
+      </div> 
+ <div class="noteText2">
         <div class="dashboard1" v-show="address == null">
           🛈 Please double check official address:
           <span style="color: white; font-size: 12px"
             >0x5500067362dF77B32836FC804932765C4348B400</span
           >
         </div>
-      </div> -->
+      </div> 
 
-      <!-- <div class="noteText">
+  <div class="noteText">
         <div
           class="dashboard4"
           v-show="address == null || currentChainId != '0x203'"
@@ -142,7 +121,7 @@
           Neatio website, you must agree with our terms and conditions listed at
           the bottom of this page.
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
