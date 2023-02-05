@@ -112,7 +112,6 @@ import Access from "./modules/access";
 import EyeInput from "./modules/eyeInput";
 import neatioapi from "neatioapi";
 import axios from "axios";
-import { watch } from "vue";
 const Utils = neatioapi.utils;
 const Web3 = require("web3");
 const web3 = new Web3("https://rpc.neatio.net");
@@ -128,7 +127,7 @@ export default {
       shortAddress: null,
       privateKey: "",
       currentChainId: "",
-      chainID: "0x38",
+      chainID: "0x203",
       staking: "",
       rewards: "",
       amount: "",
@@ -235,7 +234,6 @@ export default {
         this.address = accounts[0];
         this.getBalance();
         this.getGasPrice();
-        //this.refresher();
         this.shortAddress = `${accounts[0].substr(0, 6)}...${accounts[0].slice(
           -4
         )}`;
@@ -246,14 +244,14 @@ export default {
 
     async switchToBSCChain() {
       let chainIds = "0x38";
-      let rpc = "https://bsc-dataseed.binance.org/";
-      let browser = "https://bscscan.com";
+      let rpc = "https://rpc.neatio.net";
+      let browser = "https://rpc.neatio.net";
       let chainName = "Neatio Network";
 
       try {
         this.currentChainId = await ethereum.request({ method: "eth_chainId" });
         if (this.currentChainId === chainIds) {
-          window.alert("BSC Network has been added to Metamask.");
+          window.alert("Neatio Network has been added to Metamask.");
         }
 
         await ethereum.request({
