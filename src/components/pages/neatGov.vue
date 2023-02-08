@@ -1,8 +1,5 @@
 <template>
   <div class="main">
-    <!-- <div class="buylogo">
-      <img src="../../assets/presale.png" alt="buy logo" class="buyimg" />
-    </div> -->
 
     <div v-if="step == 1">
       <Access @unlock="unlock"></Access>
