@@ -90,13 +90,7 @@
           <button id="gtButton" @click="neatBuy">{{ "VOTE" }}</button>
         </div>
       </div> 
- <div class="noteText2">
-        <div class="dashboard1" v-show="address == null">
-
-        </div>
-      </div> 
-
-
+          There are no voting sessions yet. New sessions will be added soon!
     </div>
   </div>
 </template>
