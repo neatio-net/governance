@@ -92,10 +92,7 @@
       </div> 
  <div class="noteText2">
         <div class="dashboard1" v-show="address == null">
-          🛈 Please double check official address:
-          <span style="color: white; font-size: 12px"
-            >0x5500067362dF77B32836FC804932765C4348B400</span
-          >
+
         </div>
       </div> 
 
