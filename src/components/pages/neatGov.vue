@@ -72,9 +72,9 @@ export default {
 
     checkWallet() {
       if (this.walletNF == null) {
-        console.log("not found");
+        console.log("Wallet not found!");
       } else {
-        console.log("wallet found");
+        console.log("Wallet was found.");
       }
     },
 
@@ -112,7 +112,7 @@ export default {
         if (this.currentChainId !== this.chainId) {
           this.connectAccount();
         } else {
-          this.addresss = `BSC Network`;
+          this.addresss = `Neatio Network`;
           this.shortAddress = `${accounts[0].substr(
             0,
             6
