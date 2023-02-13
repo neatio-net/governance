@@ -140,7 +140,7 @@ export default {
     },
 
     async switchToBSCChain() {
-      let chainIds = "0x38";
+      let chainIds = "0x203";
       let rpc = "https://rpc.neatio.net";
       let browser = "https://rpc.neatio.net";
       let chainName = "Neatio Network";
@@ -165,8 +165,8 @@ export default {
                   chainId: chainIds,
                   chainName: chainName,
                   nativeCurrency: {
-                    name: "BNB",
-                    symbol: "BNB",
+                    name: "NEAT",
+                    symbol: "NEAT",
                     decimals: 18,
                   },
                   rpcUrls: [rpc],
