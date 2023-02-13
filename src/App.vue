@@ -99,15 +99,14 @@ box-shadow: 0 0 40px #00bfff6e;
 
 .box2 {
 
-  padding-bottom: 50px;
+  padding: 50px;
   width: 95vw;
   max-width: 720px;
   margin: 1rem;
   border-style: solid;
   border-width: 1px;
   border-color: azure;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   background: #191c20;
   margin: 0px auto 0px auto;
   position: relative;
