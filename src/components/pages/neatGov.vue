@@ -5,92 +5,17 @@
       <Access @unlock="unlock"></Access>
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
-      <div class="box1" v-show="address != null && currentChainId == '0x203'">
-        <div
-          class="bnblogo"
-          v-show="address != null && currentChainId == '0x203'"
-        >
-          <img src="../../assets/bnb.png" alt="bnb logo" class="bnbimg" />
-        </div>
-
-        <div
-          class="wallet-address"
-          v-show="address != null && currentChainId == '0x203'"
-        >
-          <div
-            class="address-title"
-            v-show="address != null && currentChainId == '0x203'"
-          >
-            <span class="noDisplay" style="color: #7192b3; font-weight: bold"
-              >Address: {{ address }}
-            </span>
-          </div>
-
-          <span class="displayIt" style="color: white">{{ shortAddress }}</span>
-
-          <div
-            class="address-title"
-            v-show="address != null && currentChainId == '0x203'"
-          >
-            <span style="color: #7192b3; font-weight: bold"></span
-            ><span style="color: white">{{ balance }}</span>
-            <span style="color: #00ffff"> NEAT</span>
-          </div>
-        </div>
+      <div class="information">
+      There are no voting sessions yet. New sessions will be added soon!
       </div>
-
-      <div class="box0" v-show="address != null && currentChainId != '0x203'">
-        <div class="ntrk" v-show="address != null && currentChainId != '0x203'">
-          <div>Please switch to Neatio Network network!</div>
-        </div>
-        <div
-          class="bnblogo"
-          v-show="address != null && currentChainId == '0x203'"
-        >
-          <img src="../../assets/bnb.png" alt="bnb logo" class="bnbimg" />
-        </div>
-
-        <div
-          class="wallet-address"
-          v-show="address != null && currentChainId == '0x203'"
-        >
-          <div
-            class="address-title"
-            v-show="address != null && currentChainId == '0x203'"
-          >
-            <span class="noDisplay" style="color: #7192b3; font-weight: bold"
-              >Address: {{ address }}
-            </span>
-          </div>
-
-          <span class="displayIt" style="color: white">{{ shortAddress }}</span>
-
-          <div
-            class="address-title"
-            v-show="address != null && currentChainId == '0x203'"
-          >
-            <span style="color: #7192b3; font-weight: bold"></span
-            ><span style="color: white">{{ balance }}</span>
-            <span style="color: #00ffff"> NEAT</span>
-          </div>
-
-          <div
-            class="address-title"
-            v-show="address != null && currentChainId == '0x203'"
-          >
-            ≈ ${{ balance * bnbprice }}
-          </div>
-        </div>
-      </div>
- <div class="box2" v-show="address != null && currentChainId == '0x203'">
+ <div class="box2">
         <div class="info-box"></div>
-
-
         <div class="btn" v-show="address != null && currentChainId == '0x203'">
-          <button id="gtButton" @click="neatBuy">{{ "VOTE" }}</button>
+  
+          <button id="gtButton" @click="neatVote">{{ "VOTE" }}</button>
         </div>
       </div> 
-          There are no voting sessions yet. New sessions will be added soon!
+
     </div>
   </div>
 </template>
@@ -116,20 +41,7 @@ export default {
       privateKey: "",
       currentChainId: "",
       chainID: "0x203",
-      staking: "",
-      rewards: "",
-      amount: "",
-      limit: "",
-      price: "",
-      inStake: "",
       circulating: "",
-      validators: null,
-      aprPercent: "",
-      amountToBuy: null,
-      amountBNB: "",
-      bnbprice: "",
-      totalUSD: "",
-      totalBNB: "",
     };
   },
 
@@ -193,9 +105,6 @@ export default {
       this.requestAccount();
     },
 
-    refresher() {
-      // WIP Code
-    },
 
     async requestAccount() {
       this.currentChainId = await ethereum.request({ method: "eth_chainId" });
@@ -531,8 +440,9 @@ button {
   width: 50%;
   margin: 0 auto;
 }
-.itemNeat {
+.information {
   width: 50%;
+  padding: 80px;
   margin: 0 auto;
   text-align: center;
 }
