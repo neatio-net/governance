@@ -6,12 +6,21 @@
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
       <div class="information">
-      There are no voting sessions yet. New sessions will be added soon!
+      <!-- There are no voting sessions yet. New sessions will be added soon! -->
       </div>
  <div class="box2">
-        <div class="info-box"></div>
-        <div class="btn" v-show="address != null && currentChainId == '0x203'">
-  
+        <div class="boxess">
+          <div class="box3">
+          TEST3
+         </div>
+         <div class="box3">
+          TEST3
+         </div>
+        </div>
+
+
+
+        <div class="btn" v-show="address != null && currentChainId == '0x203'">  
           <button id="gtButton" @click="neatVote">{{ "VOTE" }}</button>
         </div>
       </div> 
@@ -403,6 +412,7 @@ button {
   padding-top: 40px;
   text-align: center;
   margin: 0 auto;
+  display: inline-block;
 }
 
 .card-text {
@@ -433,7 +443,12 @@ button {
   margin-top: 50px;
   color: #000;
 }
-
+.boxess {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px 0px;
+}
 .button {
   color: #000;
   text-align: center;
