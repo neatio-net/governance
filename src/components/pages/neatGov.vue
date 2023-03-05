@@ -8,19 +8,21 @@
       <div class="information">
       <!-- There are no voting sessions yet. New sessions will be added soon! -->
       </div>
- <div class="box2">
+ <div class="box2">  
+        1 NEAT = 1 VOTE
         <div class="boxess">
           <div class="box3">
-          TEST3
+          Proposal 1
+
+        
          </div>
+         
          <div class="box3">
-          TEST3
+          Proposal 2
          </div>
         </div>
 
-
-
-        <div class="btn" v-show="address != null && currentChainId == '0x203'">  
+        <div class="btn" >  
           <button id="gtButton" @click="neatVote">{{ "VOTE" }}</button>
         </div>
       </div> 
