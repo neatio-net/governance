@@ -100,8 +100,8 @@ box-shadow: 0 0 40px #00bfff6e;
 .box2 {
 
   padding: 50px;
-  width: 95vw;
-  max-width: 720px;
+  width: 75vw;
+  height: 60vh;
   margin: 1rem;
   border-style: solid;
   border-width: 1px;
@@ -117,6 +117,29 @@ box-shadow: 0 0 40px #00bfff6e;
 
   box-shadow: 0 0 40px #00bfff6e;
 }
+
+
+.box3 {
+
+padding: 50px;
+width: 20vw;
+height: 15vh;
+margin: 5rem;
+border-style: solid;
+border-width: 1px;
+border-color: azure;
+border-radius: 10px;
+background: #191c20;
+margin: 2rem auto 0px auto;
+position: relative;
+text-align: left;
+box-sizing: 1px;
+border: none;
+border: 1px solid #00ffff;
+
+box-shadow: 0 0 40px #00bfff6e;
+}
+
 
 
 .aw {
