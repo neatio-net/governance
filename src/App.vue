@@ -114,13 +114,11 @@ box-shadow: 0 0 40px #00bfff6e;
   box-sizing: 1px;
   border: none;
   border: 1px solid #00ffff;
-
   box-shadow: 0 0 40px #00bfff6e;
 }
 
 
 .box3 {
-
 padding: 50px;
 width: 20vw;
 height: 15vh;
@@ -136,7 +134,6 @@ text-align: left;
 box-sizing: 1px;
 border: none;
 border: 1px solid #00ffff;
-
 box-shadow: 0 0 40px #00bfff6e;
 }
 

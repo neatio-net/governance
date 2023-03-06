@@ -463,18 +463,6 @@ button {
   margin: 0 auto;
   text-align: center;
 }
-.neatrate {
-  text-align: center;
-  color: #00ffff;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.neatrate-bnb {
-  text-align: center;
-  color: #7192b3;
-  margin-top: 5px;
-}
 
 .btn {
   display: flex;
