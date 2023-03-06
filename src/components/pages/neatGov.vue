@@ -457,12 +457,7 @@ button {
   width: 50%;
   margin: 0 auto;
 }
-.information {
-  width: 50%;
-  padding: 80px;
-  margin: 0 auto;
-  text-align: center;
-}
+
 
 .btn {
   display: flex;
