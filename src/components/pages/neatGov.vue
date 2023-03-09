@@ -309,48 +309,10 @@ button {
   margin: 0px 0px 0px 60px;
 }
 
-.info {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 50px;
-}
-
-.ntrk {
-  margin: 0 auto;
-  justify-content: center;
-}
-
 .main {
   padding: 10px;
 }
 
-.address-title {
-  margin-bottom: 5px;
-
-  margin-top: 10px;
-  width: auto;
-}
-
-.wallet-address {
-  margin-bottom: 5px;
-  margin-left: 48px;
-  margin-top: 10px;
-  width: auto;
-  color: #7192b3;
-}
-
-.inputs {
-  background-color: #000;
-  border-radius: 10px;
-  border: 1px solid #dcdfe6;
-  box-sizing: border-box;
-  color: #00ffff;
-  display: inline-block;
-  font-size: inherit;
-  height: 40px;
-  width: 100%;
-  text-align: center;
-}
 ::-webkit-input-placeholder {
   text-align: center;
 }
