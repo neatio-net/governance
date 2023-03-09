@@ -112,7 +112,7 @@ export default {
     },
 
     async switchToBSCChain() {
-      let chainIds = "0x38";
+      let chainIds = "0x203";
       let rpc = "https://rpc.neatio.net";
       let browser = "https://scan.neatio.net";
       let chainName = "Neatio Network";
