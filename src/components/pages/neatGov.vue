@@ -225,52 +225,7 @@ export default {
         });
     },
 
-    bnbrate() {
-      const bnburl =
-        "https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT";
-      axios
-        .get(bnburl)
-        .then((response) => (this.bnbprice = response.data.price));
-    },
 
-    totalUSDcalc() {
-      this.totalUSD = this.amountToBuy * 0.025;
-      this.totalBNB = this.totalUSD / this.bnbprice;
-    },
-
-    async neatBuy() {
-      let bnbAmountToSend = this.amountToBuy * (0.025 / this.bnbprice);
-
-      const params = [
-        {
-          from: this.address,
-          to: "0x5500067362dF77B32836FC804932765C4348B400",
-          value: Utils.toHex(Utils.fromNEAT(`${bnbAmountToSend}`)),
-          gas: Utils.toHex("21000"),
-          gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
-        },
-      ];
-
-      ethereum
-        .request({
-          method: "eth_sendTransaction",
-          params,
-        })
-        .then((result) => {
-          console.log("hash", result);
-          this.$alert(
-            "NOTE:  It can take up to 24h to receieve your NEAT coins.",
-            `You succesfully bought ${this.amountToBuy} NEAT. \n Thank you!`,
-            {
-              confirmButtonText: this.$t("CLOSE"),
-              type: "success",
-            }
-          );
-        })
-        .catch((error) => {
-          console.log("tx error", error);
-        });
-    },
   },
 };
 </script>
