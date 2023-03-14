@@ -98,11 +98,10 @@ box-shadow: 0 0 40px #00bfff6e;
 
 .box2 {
 
-  padding: 50px;
-  width: 60vw;
-  height: 60vh;
-  margin: 1rem;
-
+  padding: 24px;
+  max-width: 1440px;
+  max-height: auto;
+  margin: 10px;
   border-style: solid;
   border-width: 1px;
   border-color: azure;
@@ -120,8 +119,8 @@ box-shadow: 0 0 40px #00bfff6e;
 
 .box3 {
 padding: 10px;
-width: 24vw;
-height: 15vh;
+width: 28vw;
+height: 24vh;
 margin: 5rem;
 border-style: solid;
 border-width: 1px;
