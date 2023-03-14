@@ -14,7 +14,10 @@
 
         <div class="boxess">
           <div class="box3">
-          Voting amount ($NEAT coins) should be returned to voters.        
+          Voting amount ($NEAT coins) should be returned.   
+          <div class="btn" >  
+          <button id="gtButton" @click="neatVote1">{{ "VOTE" }}</button>
+        </div>     
          </div>
         
 
@@ -23,6 +26,9 @@
   
          <div class="box3">
           Voting amount ($NEAT coins) should be burned.
+          <div class="btn" >  
+          <button id="gtButton" @click="neatVote2">{{ "VOTE" }}</button>
+        </div>
          </div>
         
 
@@ -30,9 +36,7 @@
 
         </div>
 
-        <div class="btn" >  
-          <button id="gtButton" @click="neatVote">{{ "VOTE" }}</button>
-        </div>
+
       </div> 
 
     </div>
@@ -304,10 +308,11 @@ button {
 
 .btn {
   display: flex;
+
 }
 #gtButton {
-  width: 140px;
-  height: 40px;
+  width: 120px;
+  height: 36px;
   color: #000000;
   border: 1px solid #000;
   border-radius: 10px;
