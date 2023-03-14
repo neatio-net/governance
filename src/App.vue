@@ -23,7 +23,10 @@ export default {
 
 @media only screen and (max-width: 560px) {
 
+  .proposal{
+ text-align: center;
 
+}
 .el-message-box {
   width: 268px !important;
 }

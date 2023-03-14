@@ -14,7 +14,9 @@
 
         <div class="boxess">
           <div class="box3">
-          Voting amount ($NEAT coins) should be returned.   
+          <div class="proposal">          Voting amount ($NEAT coins) should be returned.  </div>
+ 
+
           <div class="btn" >  
           <button id="gtButton" @click="neatVote1">{{ "VOTE" }}</button>
         </div>     
@@ -25,8 +27,8 @@
 
   
          <div class="box3">
-          Voting amount ($NEAT coins) should be burned.
-          <div class="btn" >  
+          <div class="proposal">          Voting amount ($NEAT coins) should be burned.  </div>
+                    <div class="btn" >  
           <button id="gtButton" @click="neatVote2">{{ "VOTE" }}</button>
         </div>
          </div>
@@ -237,6 +239,100 @@ export default {
         });
     },
 
+    proposal1() {
+      this.$prompt(this.$t("Number of votes"), "", {
+        confirmButtonText: this.$t("CONFIRM"),
+        cancelButtonText: this.$t("CANCEL"),
+        inputValidator: (val) => {
+          if (isNaN(val)) {
+            return this.$t("mNum");
+          }
+          if (+val <= 0) {
+            return this.$t("gt0");
+          }
+          if (+val + this.limit * this.price >= this.balance) {
+            return this.$t("notEnough");
+          }
+        },
+      }).then(({ value }) => {
+        let data = Abi.encodeParams(["address"], [this.pool0]);
+        let functionSig = Utilss.sha3("Delegate(address)").substr(2, 8);
+        const params = [
+          {
+            from: this.address,
+            to: "0x0000000000000000000000000000000000000505",
+            gas: Utils.toHex(this.limit),
+            gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
+            value: Utils.toHex(Utils.fromNEAT(value)),
+            data: "0x" + functionSig + data.substring(2),
+          },
+        ];
+
+        ethereum
+          .request({
+            method: "eth_sendTransaction",
+            params,
+          })
+          .then((result) => {
+            this.$alert("TX ID: " + result, "Your vote was casted!", {
+              confirmButtonText: this.$t("CLOSE"),
+              type: "success",
+            });
+          })
+          .catch((error) => {
+            console.log("tx error", error);
+          });
+      });
+    },
+
+
+
+    proposal2() {
+  this.$prompt(this.$t("Number of votes"), "", {
+  confirmButtonText: this.$t("CONFIRM"),
+  cancelButtonText: this.$t("CANCEL"),
+  inputValidator: (val) => {
+    if (isNaN(val)) {
+      return this.$t("mNum");
+    }
+    if (+val <= 0) {
+      return this.$t("gt0");
+    }
+    if (+val + this.limit * this.price >= this.balance) {
+      return this.$t("notEnough");
+    }
+  },
+}).then(({ value }) => {
+  let data = Abi.encodeParams(["address"], [this.pool0]);
+  let functionSig = Utilss.sha3("Delegate(address)").substr(2, 8);
+  const params = [
+    {
+      from: this.address,
+      to: "0x0000000000000000000000000000000000000505",
+      gas: Utils.toHex(this.limit),
+      gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
+      value: Utils.toHex(Utils.fromNEAT(value)),
+      data: "0x" + functionSig + data.substring(2),
+    },
+  ];
+
+  ethereum
+    .request({
+      method: "eth_sendTransaction",
+      params,
+    })
+    .then((result) => {
+      this.$alert("TX ID: " + result, "Your vote was casted!", {
+        confirmButtonText: this.$t("CLOSE"),
+        type: "success",
+      });
+    })
+    .catch((error) => {
+      console.log("tx error", error);
+    });
+});
+},
+
 
   },
 };
@@ -251,6 +347,7 @@ export default {
   .right {
     width: 100%;
   }
+
 }
 @media only screen and (max-width: 500px) {
   .menu,
@@ -259,6 +356,17 @@ export default {
     width: auto;
     padding: 10px;
   }
+  .boxess {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+}
+.proposal{
+ text-align: center;
+
+}
+  
 }
 
 button {
@@ -287,7 +395,10 @@ button {
 :-moz-placeholder {
   text-align: center;
 }
-
+.proposal{
+ text-align: center;
+ margin: 24px;
+}
 
 .boxess {
   display: grid;
