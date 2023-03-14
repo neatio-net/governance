@@ -16,7 +16,7 @@
           <div class="box3">
           Voting amount ($NEAT coins) should be returned to voters.        
          </div>
-
+        
 
 
 
@@ -24,13 +24,10 @@
          <div class="box3">
           Voting amount ($NEAT coins) should be burned.
          </div>
+        
 
 
 
-         <div class="box1">Pros: 
-          
-         </div>
-          <div class="box1">Cons:</div>
         </div>
 
         <div class="btn" >  
@@ -276,7 +273,7 @@ button {
 }
 
 .main {
-  padding: 10px;
+  padding: 40px;
 }
 
 ::-webkit-input-placeholder {
