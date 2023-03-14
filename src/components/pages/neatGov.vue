@@ -9,7 +9,9 @@
       <!-- There are no voting sessions yet. New sessions will be added soon! -->
       </div>
  <div class="box2">  
-        1 NEAT = 1 VOTE
+
+        <div class="header-text">1 NEAT = 1 VOTE</div> 
+
         <div class="boxess">
           <div class="box3">
           Voting amount ($NEAT coins) should be returned to voters.        
@@ -25,7 +27,9 @@
 
 
 
-         <div class="box1">Pros:</div>
+         <div class="box1">Pros: 
+          
+         </div>
           <div class="box1">Cons:</div>
         </div>
 
@@ -296,7 +300,10 @@ button {
   width: 50%;
   margin: 0 auto;
 }
-
+.header-text{
+  text-align: center;
+  font-family: Pirulen;
+}
 
 .btn {
   display: flex;
