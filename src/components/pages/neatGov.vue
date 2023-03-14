@@ -12,14 +12,21 @@
         1 NEAT = 1 VOTE
         <div class="boxess">
           <div class="box3">
-          Proposal 1
+          Voting amount ($NEAT coins) should be returned to voters.        
+         </div>
 
-        
-         </div>
-         
+
+
+
+  
          <div class="box3">
-          Proposal 2
+          Voting amount ($NEAT coins) should be burned.
          </div>
+
+
+
+         <div class="box1">Pros:</div>
+          <div class="box1">Cons:</div>
         </div>
 
         <div class="btn" >  
