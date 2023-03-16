@@ -260,7 +260,7 @@ export default {
         const params = [
           {
             from: this.address,
-            to: "0x0000000000000000000000000000000000000505",
+            to: "0x0000000000000000000000000000000000000505", // vote address 1
             gas: Utils.toHex(this.limit),
             gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
             value: Utils.toHex(Utils.fromNEAT(value)),
@@ -285,8 +285,6 @@ export default {
       });
     },
 
-
-
     proposal2() {
   this.$prompt(this.$t("Number of votes"), "", {
   confirmButtonText: this.$t("CONFIRM"),
@@ -308,7 +306,7 @@ export default {
   const params = [
     {
       from: this.address,
-      to: "0x0000000000000000000000000000000000000505", // address to send coins
+      to: "0x0000000000000000000000000000000000000505", // vote address 2
       gas: Utils.toHex(this.limit),
       gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
       value: Utils.toHex(Utils.fromNEAT(value)),
