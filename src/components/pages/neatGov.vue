@@ -260,7 +260,7 @@ export default {
         const params = [
           {
             from: this.address,
-            to: "0x0000000000000000000000000000000000000505", // vote address 1
+            to: "0x97864BB513dF2aDC2F701c06322C42E5efE35303", // vote address 1
             gas: Utils.toHex(this.limit),
             gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
             value: Utils.toHex(Utils.fromNEAT(value)),
@@ -306,7 +306,7 @@ export default {
   const params = [
     {
       from: this.address,
-      to: "0x0000000000000000000000000000000000000505", // vote address 2
+      to: "0x4e2f9Cc046C59c13b5144Ff620a7A7FfA114758f", // vote address 2
       gas: Utils.toHex(this.limit),
       gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
       value: Utils.toHex(Utils.fromNEAT(value)),
