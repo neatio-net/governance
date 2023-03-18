@@ -9,38 +9,22 @@
       <!-- There are no voting sessions yet. New sessions will be added soon! -->
       </div>
  <div class="box2">  
-
         <div class="header-text">1 NEAT = 1 VOTE</div> 
-
         <div class="boxess">
           <div class="box3">
           <div class="proposal">          Voting amount ($NEAT coins) should be returned.  </div>
- 
-
-          <div class="btn" >  
+           <div class="btn" >  
           <button id="gtButton" @click="neatVote1">{{ "VOTE" }}</button>
         </div>     
-         </div>
-        
-
-
-
-  
-         <div class="box3">
+         </div>      
+           <div class="box3">
           <div class="proposal">          Voting amount ($NEAT coins) should be burned.  </div>
                     <div class="btn" >  
           <button id="gtButton" @click="neatVote2">{{ "VOTE" }}</button>
         </div>
-         </div>
-        
-
-
-
+         </div>      
         </div>
-
-
       </div> 
-
     </div>
   </div>
 </template>
