@@ -16,22 +16,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #00ffff;
-  font-family: Helvetica;
+  font-family: Pirulen, Helvetica;
   
 }
 
 
-@media only screen and (max-width: 560px) {
-
-  .proposal{
- text-align: center;
-
-}
-.el-message-box {
-  width: 268px !important;
-}
-
-}
 
 .el-icon-success {
   display: none !important;
@@ -101,15 +90,14 @@ box-shadow: 0 0 40px #00bfff6e;
 
 .box2 {
 
-  padding: 24px;
+  padding: 12px;
   max-width: 1440px;
-  max-height: auto;
-  margin: 10px;
+  height: auto;
   border-style: solid;
   border-width: 1px;
   border-color: azure;
   border-radius: 10px;
-  background: #191c20;
+  background: #000;
   margin: 0px auto 0px auto;
   position: relative;
   text-align: left;
@@ -120,24 +108,6 @@ box-shadow: 0 0 40px #00bfff6e;
 }
 
 
-.box3 {
-padding: 10px;
-width: 28vw;
-height: 24vh;
-margin: 5rem;
-border-style: solid;
-border-width: 1px;
-border-color: azure;
-border-radius: 10px;
-background: #191c20;
-margin: 2rem auto 0px auto;
-position: relative;
-text-align: left;
-box-sizing: 1px;
-border: none;
-border: 1px solid #00ffff;
-box-shadow: 0 0 40px #00bfff6e;
-}
 
 
 

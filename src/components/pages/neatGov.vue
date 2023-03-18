@@ -6,21 +6,22 @@
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
       <div class="information">
-      <!-- There are no voting sessions yet. New sessions will be added soon! -->
+      Voting session: March 20, 00:01  March 26, 23:59
       </div>
  <div class="box2">  
         <div class="header-text">1 NEAT = 1 VOTE</div> 
         <div class="boxess">
-          <div class="box3">
-          <div class="proposal">          Voting amount ($NEAT coins) should be returned.  </div>
+          <div class="box4">
+          <div class="proposal">          Voting amount ($NEAT coins) should be returned </div>
            <div class="btn" >  
-          <button id="gtButton" @click="neatVote1">{{ "VOTE" }}</button>
-        </div>     
-         </div>      
+          <button id="gtButton" @click="proposal1">{{ "VOTE" }}</button>
+        </div>      
+         </div>  
+
            <div class="box3">
-          <div class="proposal">          Voting amount ($NEAT coins) should be burned.  </div>
+          <div class="proposal">          Voting amount ($NEAT coins) should be burned </div>
                     <div class="btn" >  
-          <button id="gtButton" @click="neatVote2">{{ "VOTE" }}</button>
+          <button id="gtButton" @click="proposal2">{{ "VOTE" }}</button>
         </div>
          </div>      
         </div>
@@ -148,7 +149,7 @@ export default {
       }
     },
 
-    async switchToBSCChain() {
+    async switchToNeatio() {
       let chainIds = "0x203";
       let rpc = "https://rpc.neatio.net";
       let browser = "https://rpc.neatio.net";
@@ -331,23 +332,47 @@ export default {
   }
 
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 560px) {
   .menu,
   .main,
   .right {
     width: auto;
     padding: 10px;
   }
+
+  button {
+  border: none;
+  min-width: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #00ffff;
+  box-shadow: inset 0 0 0.1em #00ffff, 0 0 0.1em #00ffff;
+  border: #00ffff solid 1px;
+  background-color: #24292f;
+  border-radius: 4px;
+  outline: none;
+  margin: 0px 0px 0px 60px;
+}
+
+  .information{
+  text-align: center;
+  min-height: 10vh;
+  font-family: Pirulen;
+  font-size: 1.1rem;
+}
   .boxess {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 
 }
 .proposal{
  text-align: center;
-
+ font-family: Pirulen;
+ font-size: 13px;
 }
+
   
 }
 
@@ -367,7 +392,7 @@ button {
 }
 
 .main {
-  padding: 40px;
+  padding: 40px 10px;
 }
 
 ::-webkit-input-placeholder {
@@ -388,12 +413,11 @@ button {
   gap: 10px;
   padding: 20px 0px;
 }
-.button {
-  color: #000;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
+
+.box3{
+  border-left: 1px solid #00ffff;
 }
+
 .header-text{
   text-align: center;
   font-family: Pirulen;
@@ -404,7 +428,7 @@ button {
 
 }
 #gtButton {
-  width: 120px;
+  width: 100px;
   height: 36px;
   color: #000000;
   border: 1px solid #000;
@@ -413,8 +437,15 @@ button {
   font-size: 16px;
   cursor: pointer;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   font-weight: bold;
+}
+
+.information{
+  text-align: center;
+  min-height: 140px;
+  font-family: Pirulen;
+  font-size: 1.1rem;
 }
 
 #gtButton:hover {

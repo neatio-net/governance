@@ -4,7 +4,7 @@
       <div class="common-inline-block ic" style="">
 
         <div class="connBtn" v-show="address == null">
-          <button id="connectButton" @click="switchToBSCChain">
+          <button id="connectButton" @click="switchToNeatio">
             <div class="conColor2">{{ "Wallet not found" }}</div>
           </button>
         </div>
@@ -111,7 +111,7 @@ export default {
       }
     },
 
-    async switchToBSCChain() {
+    async switchToNeatio() {
       let chainIds = "0x203";
       let rpc = "https://rpc.neatio.net";
       let browser = "https://scan.neatio.net";
