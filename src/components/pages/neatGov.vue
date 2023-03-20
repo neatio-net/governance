@@ -12,6 +12,8 @@
         <div class="boxess">
           <div class="box4">
           <div class="proposal">          Voting amount ($NEAT coins) should be returned </div>
+
+          
            <div class="btn" >  
           <button id="gtButton" @click="proposal1">{{ "VOTE" }}</button>
         </div>      
@@ -61,7 +63,6 @@ export default {
   mounted() {
     this.connectAccount();
     this.initialize();
-    this.bnbrate();
     this.checkWallet();
   },
 
@@ -222,34 +223,28 @@ export default {
         });
     },
 
+
+
+
+
+
+
     proposal1() {
+
       this.$prompt(this.$t("Number of votes"), "", {
         confirmButtonText: this.$t("CONFIRM"),
         cancelButtonText: this.$t("CANCEL"),
-        inputValidator: (val) => {
-          if (isNaN(val)) {
-            return this.$t("mNum");
-          }
-          if (+val <= 0) {
-            return this.$t("gt0");
-          }
-          if (+val + this.limit * this.price >= this.balance) {
-            return this.$t("notEnough");
-          }
-        },
+
       }).then(({ value }) => {
-        let data = Abi.encodeParams(["address"], [this.pool0]);
-        let functionSig = Utilss.sha3("Delegate(address)").substr(2, 8);
-        const params = [
-          {
-            from: this.address,
-            to: "0x97864BB513dF2aDC2F701c06322C42E5efE35303", // vote address 1
-            gas: Utils.toHex(this.limit),
-            gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
-            value: Utils.toHex(Utils.fromNEAT(value)),
-            data: "0x" + functionSig + data.substring(2),
-          },
-        ];
+      const params = [
+        {
+          from: this.address,
+          to: "0x3be8B3BB72FfFcD3E01645d17FA6f5D5ed89c543",  // voting pool 1
+          value: Utils.toHex(Utils.fromNEAT(`${value}`)),
+          gas: Utils.toHex("21000"),
+          gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
+        },
+      ];
 
         ethereum
           .request({
@@ -267,51 +262,38 @@ export default {
           });
       });
     },
-
+    
     proposal2() {
-  this.$prompt(this.$t("Number of votes"), "", {
-  confirmButtonText: this.$t("CONFIRM"),
-  cancelButtonText: this.$t("CANCEL"),
-  inputValidator: (val) => {
-    if (isNaN(val)) {
-      return this.$t("mNum");
-    }
-    if (+val <= 0) {
-      return this.$t("gt0");
-    }
-    if (+val + this.limit * this.price >= this.balance) {
-      return this.$t("notEnough");
-    }
-  },
-}).then(({ value }) => {
-  let data = Abi.encodeParams(["address"], [this.pool0]);
-  let functionSig = Utilss.sha3("Delegate(address)").substr(2, 8);
-  const params = [
-    {
-      from: this.address,
-      to: "0x4e2f9Cc046C59c13b5144Ff620a7A7FfA114758f", // vote address 2
-      gas: Utils.toHex(this.limit),
-      gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
-      value: Utils.toHex(Utils.fromNEAT(value)),
-      data: "0x" + functionSig + data.substring(2),
-    },
-  ];
+      this.$prompt(this.$t("Number of votes"), "", {
+        confirmButtonText: this.$t("CONFIRM"),
+        cancelButtonText: this.$t("CANCEL"),
 
-  ethereum
-    .request({
-      method: "eth_sendTransaction",
-      params,
-    })
-    .then((result) => {
-      this.$alert("TX ID: " + result, "Your vote was casted!", {
-        confirmButtonText: this.$t("CLOSE"),
-        type: "success",
+      }).then(({ value }) => {
+      const params = [
+        {
+          from: this.address,
+          to: "0xE00D3bb766Eee95c8809B599DeC978D7066Df4CA",  // voting pool 2
+          value: Utils.toHex(Utils.fromNEAT(`${value}`)),
+          gas: Utils.toHex("21000"),
+          gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
+        },
+      ];
+
+        ethereum
+          .request({
+            method: "eth_sendTransaction",
+            params,
+          })
+          .then((result) => {
+            this.$alert("TX ID: " + result, "Your vote was casted!", {
+              confirmButtonText: this.$t("CLOSE"),
+              type: "success",
+            });
+          })
+          .catch((error) => {
+            console.log("tx error", error);
+          });
       });
-    })
-    .catch((error) => {
-      console.log("tx error", error);
-    });
-});
 },
 
 
