@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -107,6 +108,48 @@ box-shadow: 0 0 40px #00bfff6e;
   box-shadow: 0 0 40px #00bfff6e;
 }
 
+@media only screen and (max-width: 560px) {
+  .el-message-box {
+  width: 268px;
+}
+.information1{
+  text-align: center;
+  min-height: 10vh;
+  font-family: Pirulen;
+  color: #fff;
+  font-size: 18px;
+}
+}
+
+.el-button {
+  border-radius: 10px !important;
+  font-weight: bold !important;
+  font-family: Pirulen, Helvetica !important;
+}
+.el-message-box {
+  border-radius: 10px !important;
+  background-color: #000 !important;
+  font-family: Pirulen, Arial, Helvetica, sans-serif !important;
+}
+
+.el-message-box__content {
+  color: #00ffff !important;
+  font-size: 1rem !important;
+}
+
+.el-message-box__message {
+  text-align: center !important;
+} 
+.el-radio__input.is-checked + .el-radio__label {
+  color: #00ffff !important;
+}
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: #00ffff !important;
+  background: #00ffff !important;
+}
+.el-radio__inner:hover {
+  border: 1px solid #00ffff !important;
+}
 
 
 

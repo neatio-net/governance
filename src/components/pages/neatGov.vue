@@ -5,29 +5,43 @@
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
       <div class="information">
-      Voting session: March 20, 00:01  March 26, 23:59
+      Voting session: March 22, 00:01  March 28, 23:59
       </div>
         <div class="box2">  
         <div class="header-text">1 NEAT = 1 VOTE</div> 
         <div class="boxess">
           <div class="box4">
           <div class="proposal">          Voting amount ($NEAT coins) should be returned </div>
+          <div class="proposal1">          {{votes1}} VOTES</div>
 
           
            <div class="btn" >  
-          <button id="gtButton" @click="proposal1">{{ "VOTE" }}</button>
+          <button id="gtButton2" @click="proposal1">{{ "VOTE" }}</button>
         </div>      
          </div>  
            <div class="box3">
           <div class="proposal"> Voting amount ($NEAT coins) should be burned </div>
+          <div class="proposal1">          {{votes2}} VOTES</div>
                     <div class="btn" >  
-          <button id="gtButton" @click="proposal2">{{ "VOTE" }}</button>
+          <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button>
         </div>
          </div>      
         </div>
       </div> 
+      <div class="information1">
+        Read more on our
+        <a
+          href="     https://blog.neatio.net/post/governance/"
+          target="_blank"
+          rel="noopener"
+          ><span style="color: #ddd"><button id="gtButton">{{ "blog" }}</button></span></a
+        >
+     
+      </div>
+ 
+      </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -51,7 +65,8 @@ export default {
       privateKey: "",
       currentChainId: "",
       chainID: "0x203",
-      circulating: "",
+      votes1: "",
+      votes2:"",
     };
   },
 
@@ -64,6 +79,9 @@ export default {
     this.connectAccount();
     this.initialize();
     this.checkWallet();
+    this.getVotes1();
+    this.getVotes2();
+
   },
 
   methods: {
@@ -225,7 +243,33 @@ export default {
 
 
 
+    getVotes1() {
+      ethereum
+        .request({
+          method: "eth_getBalance",
+          params: ["0x3be8B3BB72FfFcD3E01645d17FA6f5D5ed89c543"],
+        })
+        .then((result) => {
+          this.votes1 = Utils.toNEAT(result);
+        })
+        .catch((error) => {
+          console.log("Error", error);
+        });
+    },
 
+    getVotes2() {
+      ethereum
+        .request({
+          method: "eth_getBalance",
+          params: ["0xE00D3bb766Eee95c8809B599DeC978D7066Df4CA"],
+        })
+        .then((result) => {
+          this.votes2 = Utils.toNEAT(result);
+        })
+        .catch((error) => {
+          console.log("Error", error);
+        });
+    },
 
 
 
@@ -338,19 +382,15 @@ export default {
   .information{
   text-align: center;
   min-height: 10vh;
-  font-family: Pirulen;
+  font-family: Pirulen !important;
   font-size: 1.1rem;
 }
+
   .boxess {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 
-}
-.proposal{
- text-align: center;
- font-family: Pirulen;
- font-size: 13px;
 }
 
   
@@ -384,7 +424,22 @@ button {
 }
 .proposal{
  text-align: center;
+ margin: 20px;
+}
+
+.information1{
+  text-align: center;
+  min-height: 10vh;
+  margin-top: 20px;
+  font-family: Pirulen !important;
+  color: #fff;
+  font-size: 20px;
+}
+
+.proposal1{
+ text-align: center;
  margin: 24px;
+ color: antiquewhite;
 }
 
 .boxess {
@@ -400,7 +455,7 @@ button {
 
 .header-text{
   text-align: center;
-  font-family: Pirulen;
+  font-family: Pirulen !important;
 }
 
 .btn {
@@ -421,10 +476,25 @@ button {
   font-weight: bold;
 }
 
+#gtButton2 {
+  width: 100px;
+  height: 36px;
+  color: #fff;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 40px #00bfff7e;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 .information{
   text-align: center;
   min-height: 140px;
-  font-family: Pirulen;
+  font-family: Pirulen !important;
   font-size: 1.1rem;
 }
 
