@@ -40,8 +40,6 @@ export default {
   
 }
 
-
-
 .el-icon-success {
   display: none !important;
 }

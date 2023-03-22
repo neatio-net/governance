@@ -499,7 +499,7 @@ button {
 }
 
 #gtButton:hover {
-  background-color: #00ffff;
+  background-color: #00ffff !important;
 }
 </style>
 
