@@ -39,9 +39,6 @@
      
       </div>
 
-      Submit Your Proposal
-      (fee 500 $NEAT)
-      <button id="gtButton2" @click="submitProposal">{{ "PROPOSE" }}</button>
       </div>
     </div>
 
@@ -343,40 +340,6 @@ export default {
       });
 },
 
-submitProposal() {
-
-this.$prompt(this.$t("Enter your proposal"), "", {
-  confirmButtonText: this.$t("CONFIRM"),
-  cancelButtonText: this.$t("CANCEL"),
-
-}).then(({ data }) => {
-const params = [
-  {
-    from: this.address,
-    to: "0x7d76B984BF160085E137498CBA23eEa5dED34C46",  // proposals
-    value: "0x0",
-    gas: Utils.toHex("21000"),
-    gasPrice: Utils.toHex(Utils.fromNEAT(this.price)),
-    data: Utils.toHex(data),
-  },
-];
-
-  ethereum
-    .request({
-      method: "eth_sendTransaction",
-      params,
-    })
-    .then((result) => {
-      this.$alert("TX ID: " + result, "Your vote was casted!", {
-        confirmButtonText: this.$t("CLOSE"),
-        type: "success",
-      });
-    })
-    .catch((error) => {
-      console.log("tx error", error);
-    });
-});
-},
 
 
   },
