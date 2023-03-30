@@ -12,20 +12,14 @@
         <div class="boxess">
           <div class="box4">
           <div class="proposal">          Voting amount ($NEAT coins) should be returned </div>
-          <!-- <div class="proposal1">          {{votes1}} VOTES</div> -->
           <div class="proposal1">          0 VOTES</div>
-
-          
            <div class="btn" >  
-          <!-- <button id="gtButton2" @click="proposal1">{{ "VOTE" }}</button> -->
         </div>      
          </div>  
            <div class="box3">
           <div class="proposal"> Voting amount ($NEAT coins) should be burned </div>
-          <!-- <div class="proposal1">          {{votes2}} VOTES</div> -->
           <div class="proposal1">          3658 VOTES</div>
                     <div class="btn" >  
-          <!-- <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button> -->
         </div>
          </div>      
         </div>
