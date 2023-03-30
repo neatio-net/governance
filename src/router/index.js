@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Layout = resolve => require(['@/components/layouts/Layout'], resolve);
-const neatGov = resolve => require(['@/components/pages/neatGov'], resolve)
+const neatGov = resolve => require(['@/components/pages/neatGov'], resolve);
+const ended = resolve => require(['@/components/pages/ended'], resolve);
 
 
 Vue.use(Router)
@@ -16,7 +17,6 @@ const router = new Router({
             component: neatGov,
             meta: []
         },
-
         ]
     }]
 })
