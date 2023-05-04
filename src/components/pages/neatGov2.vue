@@ -343,19 +343,7 @@ export default {
   margin: 0px 0px 0px 60px;
 }
 
-  .information{
-  text-align: center;
-  min-height: 10vh;
-  font-family: Pirulen !important;
-  font-size: 1.1rem;
-}
 
-  .boxess {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-
-}
 
   
 }
@@ -386,46 +374,7 @@ button {
 :-moz-placeholder {
   text-align: center;
 }
-.proposal{
- text-align: center;
- margin: 20px;
-}
 
-.information1{
-  text-align: center;
-  min-height: 10vh;
-  margin-top: 20px;
-  font-family: Pirulen !important;
-  color: #fff;
-  font-size: 20px;
-}
-
-.proposal1{
- text-align: center;
- margin: 24px;
- color: antiquewhite;
-}
-
-.boxess {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding: 20px 0px;
-}
-
-.box3{
-  border-left: 1px solid #00ffff;
-}
-
-.header-text{
-  text-align: center;
-  font-family: Pirulen !important;
-}
-
-.btn {
-  display: flex;
-
-}
 #gtButton {
   width: 100px;
   height: 36px;
