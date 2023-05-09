@@ -26,6 +26,13 @@ export default {
 } 
 
 @font-face {
+  font-family: "Lato";
+  src: local("Lato"),
+   url(./fonts/lato.ttf) format("truetype");
+
+} 
+
+@font-face {
   font-family: "Computer";
   src: local("Computer"),
    url(./fonts/cmunbbx.ttf) format("truetype");
@@ -51,9 +58,9 @@ export default {
 
 
 .main {
-  background-image:  url('assets/holograph.jpg');
+  /* background-image:  url('assets/holograph.jpg'); */
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.589);
+  background-color: #000;
   background-size: cover;
 
 

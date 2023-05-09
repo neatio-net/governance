@@ -4,41 +4,38 @@
       <Access @unlock="unlock"></Access>
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
+      <div class="info-header">
+    GOVERNANCE PROPOSAL #002
+      </div>
       <div class="information">
-      Voting session: March 22, 00:01  March 28, 23:59 - ENDED
+      Voting session: <span style="color:#fff">May 09, 19:00 UTC to May 12, 19:00 UTC</span>
       </div>
         <div class="box2">  
         <div class="header-text">1 NEAT = 1 VOTE</div> 
         <div class="boxess">
           <div class="box4">
-          <div class="proposal">          Voting amount ($NEAT coins) should be returned </div>
-          <!-- <div class="proposal1">          {{votes1}} VOTES</div> -->
-          <div class="proposal1">          0 VOTES</div>
+          <div class="proposal"> NEAT should be listed on: <div class="exchange1">Xeggex.com</div> (CEX)</div> 
+          <div class="proposal1">          {{votes1}} VOTES</div>
+   
 
           
            <div class="btn" >  
-          <!-- <button id="gtButton2" @click="proposal1">{{ "VOTE" }}</button> -->
+          <button id="gtButton2" @click="proposal1">{{ "VOTE" }}</button>
         </div>      
          </div>  
            <div class="box3">
-          <div class="proposal"> Voting amount ($NEAT coins) should be burned </div>
-          <!-- <div class="proposal1">          {{votes2}} VOTES</div> -->
-          <div class="proposal1">          3658 VOTES</div>
+          <div class="proposal"> NEAT should be listed on:<div class="exchange1">Pancakeswap</div> (DEX)</div>
+          <div class="proposal1">          {{votes2}} VOTES</div>
+      
                     <div class="btn" >  
-          <!-- <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button> -->
+          <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button>
         </div>
          </div>      
         </div>
       </div> 
-      <div class="information1">
-        Read more on our
-        <a
-          href="     https://blog.neatio.net/post/governance/"
-          target="_blank"
-          rel="noopener"
-          ><span style="color: #ddd"><button id="gtButton">{{ "blog" }}</button></span></a
-        >
-     
+      <div class="warning-note">
+       Please note that after the recent Neatio Governance proposal #001, the result was the burning of coins used as votes.
+       You can check the results here:  <router-link to="/prop001"><button class="neatBtn">Prop #001</button></router-link>
       </div>
 
       </div>
@@ -385,7 +382,7 @@ export default {
   .information{
   text-align: center;
   min-height: 10vh;
-  font-family: Pirulen !important;
+  font-family: Computer !important;
   font-size: 1.1rem;
 }
 
@@ -427,7 +424,10 @@ button {
 }
 .proposal{
  text-align: center;
+ color:#fff;
  margin: 20px;
+ font-size: 24px;
+ font-family: Lato !important;
 }
 
 .information1{
@@ -494,11 +494,33 @@ button {
   font-weight: bold;
 }
 
+.warning-note{
+  text-align: center;
+ margin: 20px;
+ font-size: 18px;
+ font-family: Lato !important;
+}
+
 .information{
   text-align: center;
-  min-height: 140px;
+  min-height: 80px;
   font-family: Pirulen !important;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+.info-header{
+  color: #fff;
+  text-align: center;
+  min-height: 80px;
+  font-family: Pirulen !important;
+  font-size: 1.6rem;
+}
+
+.exchange1{
+  color:rgb(235, 190, 90);
+  text-align: center;
+  font-family: Computer !important;
+  font-size: 1.4rem;
 }
 
 #gtButton:hover {
