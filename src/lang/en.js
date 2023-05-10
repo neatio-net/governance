@@ -240,7 +240,7 @@ export default {
         Redemption_account: 'Unmortgage Account',
         ticket_number: 'Redemption ticket number',
         ticket: 'ticket',
-        tickets: ' Number of votes ',
+        tickets: ' Number of votes to cast: ',
         Service_Charge: 'Service Charge',
         log: 'log',
         Mortgage_account: ' Mortgage Account: ',

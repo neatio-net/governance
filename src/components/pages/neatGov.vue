@@ -5,10 +5,10 @@
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
       <div class="info-header">
-    GOVERNANCE PROPOSAL #002
+   NEATIO GOVERNANCE PROPOSAL #002
       </div>
       <div class="information">
-      Voting session: <span style="color:#fff">May 09, 19:00 UTC to May 12, 19:00 UTC</span>
+      Voting session: <span style="color:#fff">May 11, 00:00 UTC - May 13, 00:00 UTC</span>
       </div>
         <div class="box2">  
         <div class="header-text">1 NEAT = 1 VOTE</div> 
@@ -273,7 +273,7 @@ export default {
 
     proposal1() {
 
-      this.$prompt(this.$t("Number of votes"), "", {
+      this.$prompt(this.$t("Number of votes to cast:"), "", {
         confirmButtonText: this.$t("CONFIRM"),
         cancelButtonText: this.$t("CANCEL"),
 
@@ -306,7 +306,7 @@ export default {
     },
     
     proposal2() {
-      this.$prompt(this.$t("Number of votes"), "", {
+      this.$prompt(this.$t("Number of votes to cast:"), "", {
         confirmButtonText: this.$t("CONFIRM"),
         cancelButtonText: this.$t("CANCEL"),
 
@@ -380,9 +380,9 @@ export default {
 
   .information{
   text-align: center;
-  min-height: 10vh;
+  min-height: 12vh;
   font-family: Computer !important;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
   .boxess {
@@ -512,7 +512,7 @@ button {
   text-align: center;
   min-height: 80px;
   font-family: Pirulen !important;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .exchange1{
