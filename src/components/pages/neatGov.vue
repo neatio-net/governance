@@ -34,8 +34,7 @@
         </div>
       </div> 
       <div class="warning-note">
-       Please note that after the recent Neatio Governance proposal #001, the result was the burning of coins used as votes.
-       You can check the results here:  <router-link to="/prop001"><button class="neatBtn">Prop #001</button></router-link>
+        WARNING: Please take note that the coins used to vote will be burned, as it was decided on the Neatio Governance porposal #001
       </div>
 
       </div>
