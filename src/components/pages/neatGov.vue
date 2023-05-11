@@ -15,7 +15,7 @@
         <div class="boxess">
           <div class="box4">
           <div class="proposal"> NEAT should be listed on: <div class="exchange1">Xeggex.com</div> (CEX)</div> 
-          <div class="proposal1">          {{votes1}} VOTES</div>
+          <div class="proposal1">          {{(+votes1).toFixed(0)}} <span style="color:#fff"> VOTES</span></div>
    
 
           
@@ -25,7 +25,7 @@
          </div>  
            <div class="box3">
           <div class="proposal"> NEAT should be listed on:<div class="exchange1">Pancakeswap</div> (DEX)</div>
-          <div class="proposal1">          {{votes2}} VOTES</div>
+          <div class="proposal1">          {{(+votes2).toFixed(0)}} <span style="color:#fff"> VOTES</span></div>
       
                     <div class="btn" >  
           <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button>
@@ -65,6 +65,7 @@ export default {
       chainID: "0x203",
       votes1: "",
       votes2:"",
+
     };
   },
 
@@ -249,6 +250,7 @@ export default {
         })
         .then((result) => {
           this.votes1 = Utils.toNEAT(result);
+
         })
         .catch((error) => {
           console.log("Error", error);
@@ -441,7 +443,9 @@ button {
 .proposal1{
  text-align: center;
  margin: 24px;
- color: antiquewhite;
+ font-size: 1.6rem;
+ font-family: Helvetica, sans-serif;
+ color: aqua;
 }
 
 .boxess {
