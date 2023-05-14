@@ -5,10 +5,10 @@
     </div>
     <div v-if="step == 2" style="padding-bottom: 90px">
       <div class="info-header">
-   NEATIO GOVERNANCE PROPOSAL #002
+   NEATIO GOVERNANCE PROPOSAL #002 (ENDED)
       </div>
       <div class="information">
-      Voting session: <span style="color:#fff">May 11, 00:00 UTC - May 13, 00:00 UTC</span>
+      Voting session: <span style="color:#fff"> May 11, 00:00 UTC - May 13, 00:00 UTC</span>
       </div>
         <div class="box2">  
         <div class="header-text">1 NEAT = 1 VOTE</div> 
@@ -20,7 +20,7 @@
 
           
            <div class="btn" >  
-          <button id="gtButton2" @click="proposal1">{{ "VOTE" }}</button>
+          <!-- <button id="gtButton2" @click="proposal1">{{ "VOTE" }}</button> -->
         </div>      
          </div>  
            <div class="box3">
@@ -28,7 +28,7 @@
           <div class="proposal1">          {{(+votes2).toFixed(0)}} <span style="color:#fff"> VOTES</span></div>
       
                     <div class="btn" >  
-          <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button>
+          <!-- <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button> -->
         </div>
          </div>      
         </div>
