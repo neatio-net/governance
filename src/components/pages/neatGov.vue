@@ -15,7 +15,8 @@
         <div class="boxess">
           <div class="box4">
           <div class="proposal"> NEAT should be listed on: <div class="exchange1">Xeggex.com</div> (CEX)</div> 
-          <div class="proposal1">          {{(+votes1).toFixed(0)}} <span style="color:#fff"> VOTES</span></div>
+          <!-- <div class="proposal1">          {{(+votes1).toFixed(0)}} <span style="color:#fff"> VOTES</span></div> -->
+          <div class="proposal1"> 1285 <span style="color:#fff"> VOTES</span></div>
    
 
           
@@ -25,7 +26,8 @@
          </div>  
            <div class="box3">
           <div class="proposal"> NEAT should be listed on:<div class="exchange1">Pancakeswap</div> (DEX)</div>
-          <div class="proposal1">          {{(+votes2).toFixed(0)}} <span style="color:#fff"> VOTES</span></div>
+          <!-- <div class="proposal1">          {{(+votes2).toFixed(0)}} <span style="color:#fff"> VOTES</span></div> -->
+          <div class="proposal1"> 2061 <span style="color:#fff"> VOTES</span></div>
       
                     <div class="btn" >  
           <!-- <button id="gtButton2" @click="proposal2">{{ "VOTE" }}</button> -->
